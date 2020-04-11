@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<Pane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+
+   <children>
+      <Button fx:id="button" layoutX="40.0" layoutY="200.0" mnemonicParsing="false" onAction="#showDateTime" prefHeight="71.0" prefWidth="528.0" text="=" />
+
+      <VBox layoutX="312.0" layoutY="20.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="280.0" GridPane.columnIndex="1">
+         <children>
+            <TextField fx:id="myTextField1" promptText="Значение а" />
+            <TextField fx:id="myTextField2" promptText="значение b (наименьшая сторона)" />
+            <TextField fx:id="myTextField3" promptText="Толщина" />
+            <TextField fx:id="myTextField4" prefHeight="25.0" prefWidth="280.0" promptText="Модуль упругости Е" />
+            <TextField fx:id="myTextField6" prefHeight="25.0" prefWidth="280.0" promptText="Действующие напряжения" />
+         </children>
+      </VBox>
+      <VBox layoutX="611.0" prefHeight="562.0" prefWidth="271.0" GridPane.columnIndex="21">
+         <children>
+            <ImageView fx:id="image" fitHeight="116.0" fitWidth="174.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Zadelka1.PNG" />
+               </image></ImageView>
+            <CheckBox fx:id="checkbox1" mnemonicParsing="false" text="Все края защемлены" />
+            <ImageView fitHeight="122.0" fitWidth="237.0" layoutX="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Zadelka2.PNG" />
+               </image></ImageView>
+            <CheckBox fx:id="checkbox2" mnemonicParsing="false" text="Шарнир по верхним  и нижним кромкам" />
+            <ImageView fitHeight="127.0" fitWidth="272.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Zadelka3.PNG" />
+               </image></ImageView>
+            <CheckBox fx:id="checkbox3" mnemonicParsing="false" text="Шарнир по бокам" />
+            <ImageView fitHeight="129.0" fitWidth="392.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Zadelka4.PNG" />
+               </image></ImageView>
+            <CheckBox fx:id="checkbox4" mnemonicParsing="false" text="Шарнир кругом" />
+         </children>
+      </VBox>
+
+            <VBox layoutX="20.0" layoutY="20.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="262.0">
+         <children>
+            <Label prefHeight="25.0" prefWidth="185.0" text="Значение a" />
+            <Label prefHeight="25.0" prefWidth="262.0" text="Значение b (наименьшая сторона)" />
+            <Label prefHeight="25.0" prefWidth="188.0" text="Толщина" />
+            <Label prefHeight="25.0" prefWidth="186.0" text="Модуль упругости E" />
+            <Label prefHeight="25.0" prefWidth="188.0" text="Действующие напряжения" />
+         </children>
+      </VBox>
+      <VBox layoutX="312.0" layoutY="311.0" prefHeight="200.0" prefWidth="280.0">
+         <children>
+            <TextField fx:id="myTextField5" prefHeight="25.0" prefWidth="280.0" promptText="Касательное напряжения(кр)" />
+            <TextField fx:id="myTextField7" prefHeight="25.0" prefWidth="280.0" promptText="Запас прочности" />
+         </children>
+      </VBox>
+      <VBox layoutX="20.0" layoutY="310.0" prefHeight="200.0" prefWidth="262.0">
+         <children>
+            <Label prefHeight="25.0" prefWidth="260.0" text="Критическое касательное напряжения" />
+            <Label prefHeight="25.0" prefWidth="187.0" text="Запас прочности" />
+         </children>
+      </VBox>
+   </children>
+  
+</Pane>
