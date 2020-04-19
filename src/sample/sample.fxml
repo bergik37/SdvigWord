@@ -10,10 +10,10 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 
-<Pane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<Pane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
 
    <children>
-      <Button fx:id="button" layoutX="40.0" layoutY="200.0" mnemonicParsing="false" onAction="#showDateTime" prefHeight="71.0" prefWidth="528.0" text="=" />
+      <Button fx:id="button" layoutX="40.0" layoutY="200.0" mnemonicParsing="false" onAction="#solve" prefHeight="71.0" prefWidth="528.0" text="=" />
 
       <VBox layoutX="312.0" layoutY="20.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="280.0" GridPane.columnIndex="1">
          <children>
@@ -21,7 +21,7 @@
             <TextField fx:id="myTextField2" promptText="значение b (наименьшая сторона)" />
             <TextField fx:id="myTextField3" promptText="Толщина" />
             <TextField fx:id="myTextField4" prefHeight="25.0" prefWidth="280.0" promptText="Модуль упругости Е" />
-            <TextField fx:id="myTextField6" prefHeight="25.0" prefWidth="280.0" promptText="Действующие напряжения" />
+            <TextField fx:id="myTextField5" prefHeight="25.0" prefWidth="280.0" promptText="Действующие напряжения" />
          </children>
       </VBox>
       <VBox layoutX="611.0" prefHeight="562.0" prefWidth="271.0" GridPane.columnIndex="21">
@@ -60,7 +60,7 @@
       </VBox>
       <VBox layoutX="312.0" layoutY="311.0" prefHeight="200.0" prefWidth="280.0">
          <children>
-            <TextField fx:id="myTextField5" prefHeight="25.0" prefWidth="280.0" promptText="Касательное напряжения(кр)" />
+            <TextField fx:id="myTextField6" promptText="Критическое касательное напряжения" />
             <TextField fx:id="myTextField7" prefHeight="25.0" prefWidth="280.0" promptText="Запас прочности" />
          </children>
       </VBox>
@@ -70,6 +70,7 @@
             <Label prefHeight="25.0" prefWidth="187.0" text="Запас прочности" />
          </children>
       </VBox>
+      <Button layoutX="43.0" layoutY="499.0" mnemonicParsing="false" onAction="#createWord" prefHeight="71.0" prefWidth="517.0" text="Создание отчета" />
    </children>
   
 </Pane>
