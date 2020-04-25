@@ -1,6 +1,5 @@
 package sample;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.CheckBox;
@@ -10,7 +9,6 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import static java.lang.Double.parseDouble;
-
 
 
 public class Controller extends View implements Initializable {
@@ -26,7 +24,6 @@ public class Controller extends View implements Initializable {
     @FXML
     private TextField myTextField5;
 
-
     @FXML
     private CheckBox checkbox1;
     @FXML
@@ -37,13 +34,11 @@ public class Controller extends View implements Initializable {
     private CheckBox checkbox4;
 
 
-
-
     private Model model = new Model();
 
    @Override
     public void initialize(URL location, ResourceBundle resources) {
-       myTextField1.setTextFormatter(new AlphaNumericTextFormatter());
+       myTextField1.setTextFormatter(new AlphaNumericTextFormatter(2));
        myTextField2.setTextFormatter(new AlphaNumericTextFormatter());
        myTextField3.setTextFormatter(new AlphaNumericTextFormatter());
        myTextField4.setTextFormatter(new AlphaNumericTextFormatter());
@@ -74,8 +69,6 @@ public class Controller extends View implements Initializable {
  {
          model.setNum5(parseDouble(myTextField5.getText()));
      }
-
-
 
         model.setCheckBox1(checkbox1);
         model.setCheckBox2(checkbox2);

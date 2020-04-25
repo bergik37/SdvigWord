@@ -1,14 +1,21 @@
 package sample;
 
 import javafx.scene.control.CheckBox;
+
 import org.apache.poi.xwpf.usermodel.XWPFDocument;
 import org.apache.poi.xwpf.usermodel.XWPFTable;
 import org.apache.poi.xwpf.usermodel.XWPFTableRow;
+import org.w3c.dom.Document;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+import org.xml.sax.SAXException;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
 
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
-
 
 public class Model {
 
@@ -253,30 +260,22 @@ public class Model {
 
 
     void runWord()throws IOException {
-
             XWPFDocument document = new XWPFDocument();
-
             //Write the Document in file system
             FileOutputStream out = new FileOutputStream(new File("D:/createdocument.docx"));
 
             XWPFTable table = document.createTable();
             XWPFTableRow tableRowOne = table.getRow(0);
             //create first row
-
             table.getBottomBorderColor();
-            tableRowOne.getCell(0).setText("col two, row one");
-            tableRowOne.addNewTableCell().setText("col two, row one");
-            tableRowOne.addNewTableCell().setText("col three, row one");
-
-
+            tableRowOne.getCell(0).setText(String.valueOf("b="+zapas));
+            tableRowOne.addNewTableCell().setText("");
+            tableRowOne.addNewTableCell().setText("τ");
             table.removeBorders();
             document.write(out);
             out.close();
-
-
             System.out.println("Pfg");
 
-        }
-
+    }
     }
 
